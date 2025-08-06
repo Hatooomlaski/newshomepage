@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/8185f928cf.js" crossorigin="anonymous"></script>
   
   <title>Frontend Mentor | News homepage</title>
 
@@ -15,15 +16,21 @@
   </style> -->
 <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="bg-[#F2F2F2] font-sans h-full w-full p-25">
+<body class="bg-[#F2F2F2] font-sans md:h-full md:w-full h-screen p-5 w-screen md:p-20">
 
 <div class="grid grid-cols-2 justify-between ">
-<div>
+<div >
   <img src="./assets/images/logo.svg" alt="logo">
+
   </div>
+
+  <div class="md:hidden text-right">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  
   <div>
     <nav>
-      <ul class="flex gap-7 font-light">
+      <ul class="hidden md:flex gap-7 font-light">
         <li>
           <a href="#">Home</a>
         </li>
@@ -46,19 +53,17 @@
 </div>
 
 <!-- main Div to hold content -->
-<div class="md:grid md:grid-cols-2 grid  mt-5 justify-evenly w-screen">
+<div class=" md:flex md:justify-center md:mt-5 mt-5 md:w-full">
 
   <!-- sub div to hold first part -->
-  <div class="flex flex-col w-[90%] overflow-visible">
+  <div class="flex flex-col w-[53%] overflow-visible">
 
     <!-- div to hold image -->
-    <div class="static"><img src="./assets/images/image-web-3-desktop.jpg" alt="image3"></div>
-
-
- 
+    <div class="static md:block"><img src="./assets/images/image-web-3-desktop.jpg" alt="image3"></div>
+    <div class="static md:hidden"><img src="./assets/images/image-web-3-mobile.jpg" alt="image3"></div>
 
     <!-- div to hold text(s) below image -->
-  <div class="grid grid-cols-2 justify-between">
+  <div class="flex flex-col md:grid md:grid-cols-2 md:mt-4 justify-between">
     <!-- div to hold first text -->
     <div >
       <h1 class="font-extrabold text-4xl">The Bright Future of Web 3.0?</h1>
@@ -73,15 +78,36 @@
     </div>
   </div>
 
-
-
-
-
   </div>
 
-
   <!-- sub div to hold second part -->
-  <div class="bg-black text-white w-[40%] gap-y-3 p-2 mb-3">
+  <!-- <div class="bg-black text-white w-[90%] md:w-[40%] md:gap-y-3 md:p-2 md:mb-3 mx-auto">
+
+    <h1 class="font-bold text-yellow-400 text-2xl">New</h1>
+    <br>
+
+    <div class="">
+      <h2>Hydrogen VS Electric Cars</h2>
+      <p class="text-gray-400 font-light text-sm">Will hydrogen-fueled cars ever catch up to EVs?</p>
+    </div>
+    <br>
+    <hr>
+
+    <div>
+      <h2>The Downsides of AI Artistry</h2>
+      <p  class="text-gray-400 font-light text-sm">What are the possible adverse effects of on-demand AI image generation?</p>
+    </div>
+    <br>
+  <hr>
+
+    <div>
+      <h2>Is VC Funding Drying Up?</h2>
+      <p  class="text-gray-400 font-light text-sm">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+    </div>
+
+  </div>
+-->
+  <div class="bg-black text-white w-[90%] md:w-[29%] md:ml-5 md:gap-y-3 md:p-2 md:mb-3 mx-auto"> 
 
     <h1 class="font-bold text-yellow-400 text-2xl">New</h1>
     <br>
@@ -107,11 +133,13 @@
 
   </div>
 
+
+  
 </div>
 
 
 <!-- div to hold footer -->
-<div class="flex gap-13 mt-5">
+<div class="md:flex md:flex-row md:gap-13 md:mt-5 flex flex-col">
 
 <!-- div to hold first part of footer -->
 <div class="flex gap-2">
